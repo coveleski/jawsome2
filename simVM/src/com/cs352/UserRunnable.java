@@ -2,28 +2,28 @@ package com.cs352;
 
 import java.io.*;
 
-public class UserRunnable implements Runnable{
+public class UserRunnable implements Runnable {
 
     int page_table[];
     int id;
     String filename;
 
 
-    private class Address{
+    private class Address {
 
         private int offset;
         private int page_number;
         private int full;
 
-        private Address(int i){
+        private Address(int i) {
             full = i;
             //get the exponents for the frame size
             int exp = SingletonContainer.getInstance().getFrame_size_exp();
             //offset is 2^pagesize bits
-            this.offset = i & ((int) Math.pow(2, exp) -1);
+            this.offset = i & ((int) Math.pow(2, exp) - 1);
             //page # is the rest, so we'll just
             // shift off the offset and call it good
-            this.page_number = i >> (16-exp);
+            this.page_number = i >> (16 - exp);
         }
 
         public int getPage_number() {
@@ -42,7 +42,7 @@ public class UserRunnable implements Runnable{
             this.offset = offset;
         }
 
-        public String toString(){
+        public String toString() {
 
             return Integer.toString(full);
 
@@ -50,16 +50,17 @@ public class UserRunnable implements Runnable{
 
     }
 
-    public UserRunnable(int id){
+    public UserRunnable(int id) {
         this.id = id;
-        filename = "address_" + id +".txt";
-        for (int i = 0; i < page_table.length; ++i){
+        filename = "address_" + id + ".txt";
+        for (int i = 0; i < page_table.length; ++i) {
             page_table[i] = -1;
         }
 
 
     }
-    public void run(){
+
+    public void run() {
         //open the appropriate file
         try {
             //open the file and prep for reading
@@ -68,7 +69,7 @@ public class UserRunnable implements Runnable{
             //get the initial  address from the file
             String s_address = in.readLine();
             //while the file end is not reached
-            while (s_address != null){
+            while (s_address != null) {
                 //convert address to int
                 int unprocessed_address = Integer.parseInt(s_address);
                 Address address = new Address(unprocessed_address);
@@ -90,14 +91,33 @@ public class UserRunnable implements Runnable{
 
     }
 
-    private void lookup(Address address){
+    private void lookup(Address address) {
 
         int frame_num = page_table[address.page_number];
-        if (frame_num!= -1 && SingletonContainer.getInstance().main_mem[frame_num].getOwnerID() == this.id){
-            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)", id, address, address.page_number, address.offset, frame_num);
+        if (frame_num != -1 && SingletonContainer.getInstance().main_mem[frame_num].getOwnerID() == this.id) {
+            SingletonContainer.getInstance().main_mem[frame_num].access(id);
+            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
             return;
         } else {
             //page fault
+            System.out.printf("Process %d issues an I/O operation to swap in demanded page(page number = %d)\n", id, address.page_number);
+
+            //sleep to simulate I/O time
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                System.out.println("Sleep failed");
+                e.printStackTrace();
+            }
+
+            //wake from sleep, update page table
+            //TODO: Update Page Table
+            //TODO: Update 0 in print below
+            System.out.printf("Process %d demanded page(page number = %d) has been swapped in from main memory (frame number = %d", id, address.page_number, 0);
+
+            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
+
+
         }
     }
 }

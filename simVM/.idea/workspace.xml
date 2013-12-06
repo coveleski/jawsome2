@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/cs352/UserRunnable.java" line="98" mnemonic="0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ab98fedc-2d74-4dc0-ab99-b2bff565562f" name="Default" comment="" />
     <ignored path="simVM.iws" />
@@ -64,13 +67,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="simVM.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cs352/simVM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="12" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserRunnable.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cs352/UserRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="51" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.48803827" vertical-offset="0" max-vertical-offset="627">
+            <state line="117" column="196" selection-start="3841" selection-end="3841" vertical-scroll-proportion="0.75598085" vertical-offset="291" max-vertical-offset="969">
               <folding>
                 <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
-                <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+                <element signature="method#toString#0;class#Address#0;class#UserRunnable#0" expanded="false" />
                 <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
                 <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
               </folding>
@@ -81,7 +93,7 @@
       <file leaf-file-name="SingletonContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cs352/SingletonContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+            <state line="18" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
               <folding>
                 <element signature="method#SingletonContainer#0;class#SingletonContainer#0" expanded="false" />
                 <element signature="method#setFrame_size#0;class#SingletonContainer#0" expanded="false" />
@@ -91,15 +103,6 @@
                 <element signature="method#findExponent#0;class#SingletonContainer#0" expanded="false" />
                 <element signature="method#getInstance#0;class#SingletonContainer#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Frame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -126,7 +129,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
+    <option name="width" value="1255" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -206,6 +209,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -345,7 +349,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1255" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -364,7 +368,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3665254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27925748" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -406,7 +410,7 @@
         <state line="52" column="13" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1615">
           <folding>
             <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
-            <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#toString#0;class#Address#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
           </folding>
@@ -440,16 +444,16 @@
         <state line="67" column="25" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.8" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cs352/simVM.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5260586" vertical-offset="0" max-vertical-offset="884">
+        <state line="21" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.46092504" vertical-offset="0" max-vertical-offset="627">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cs352/SingletonContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+        <state line="18" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
           <folding>
             <element signature="method#SingletonContainer#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#setFrame_size#0;class#SingletonContainer#0" expanded="false" />
@@ -462,19 +466,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cs352/simVM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+        <state line="15" column="12" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cs352/UserRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="51" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.48803827" vertical-offset="0" max-vertical-offset="627">
+        <state line="117" column="196" selection-start="3841" selection-end="3841" vertical-scroll-proportion="0.75598085" vertical-offset="291" max-vertical-offset="969">
           <folding>
             <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
-            <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#toString#0;class#Address#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
           </folding>
