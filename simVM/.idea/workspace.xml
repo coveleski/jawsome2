@@ -64,21 +64,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="simVM.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cs352/simVM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserRunnable.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cs352/UserRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="22" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.66775244" vertical-offset="219" max-vertical-offset="1394">
+            <state line="86" column="51" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.48803827" vertical-offset="0" max-vertical-offset="627">
               <folding>
+                <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
                 <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+                <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
+                <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -87,12 +81,13 @@
       <file leaf-file-name="SingletonContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cs352/SingletonContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="34" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
               <folding>
                 <element signature="method#SingletonContainer#0;class#SingletonContainer#0" expanded="false" />
                 <element signature="method#setFrame_size#0;class#SingletonContainer#0" expanded="false" />
                 <element signature="method#setPages_per_process#0;class#SingletonContainer#0" expanded="false" />
-                <element signature="method#setMain_mem_frames#0;class#SingletonContainer#0" expanded="false" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
                 <element signature="method#findExponent#0;class#SingletonContainer#0" expanded="false" />
                 <element signature="method#getInstance#0;class#SingletonContainer#0" expanded="false" />
               </folding>
@@ -103,7 +98,7 @@
       <file leaf-file-name="Frame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="19" column="22" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
@@ -122,11 +117,11 @@
         <option value="$PROJECT_DIR$/src/com/cs352/FrameStack.java" />
         <option value="$PROJECT_DIR$/src/com/cs352/Main.java" />
         <option value="$PROJECT_DIR$/src/com/cs352/UserThread.java" />
-        <option value="$PROJECT_DIR$/src/com/cs352/Frame.java" />
         <option value="$PROJECT_DIR$/src/com/cs352/simVM.java" />
-        <option value="$PROJECT_DIR$/src/com/cs352/UserRunnable.java" />
         <option value="$PROJECT_DIR$/src/com/cs352/Singleton.java" />
         <option value="$PROJECT_DIR$/src/com/cs352/SingletonContainer.java" />
+        <option value="$PROJECT_DIR$/src/com/cs352/Frame.java" />
+        <option value="$PROJECT_DIR$/src/com/cs352/UserRunnable.java" />
       </list>
     </option>
   </component>
@@ -410,7 +405,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="13" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1615">
           <folding>
+            <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -422,7 +420,8 @@
             <element signature="method#SingletonContainer#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#setFrame_size#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#setPages_per_process#0;class#SingletonContainer#0" expanded="false" />
-            <element signature="method#setMain_mem_frames#0;class#SingletonContainer#0" expanded="false" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
             <element signature="method#findExponent#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#getInstance#0;class#SingletonContainer#0" expanded="false" />
           </folding>
@@ -441,39 +440,43 @@
         <state line="67" column="25" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.8" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cs352/simVM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="884">
+        <state line="19" column="9" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5260586" vertical-offset="0" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cs352/SingletonContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+        <state line="34" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
           <folding>
             <element signature="method#SingletonContainer#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#setFrame_size#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#setPages_per_process#0;class#SingletonContainer#0" expanded="false" />
-            <element signature="method#setMain_mem_frames#0;class#SingletonContainer#0" expanded="false" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
             <element signature="method#findExponent#0;class#SingletonContainer#0" expanded="false" />
             <element signature="method#getInstance#0;class#SingletonContainer#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cs352/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cs352/UserRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="22" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.66775244" vertical-offset="219" max-vertical-offset="1394">
+        <state line="86" column="51" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.48803827" vertical-offset="0" max-vertical-offset="627">
           <folding>
+            <element signature="class#Address#0;class#UserRunnable#0" expanded="false" />
             <element signature="method#Address#0;class#Address#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#UserRunnable#0;class#UserRunnable#0" expanded="false" />
+            <element signature="method#run#0;class#UserRunnable#0" expanded="false" />
           </folding>
         </state>
       </provider>

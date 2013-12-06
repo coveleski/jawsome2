@@ -5,7 +5,6 @@ import java.io.*;
 public class UserRunnable implements Runnable{
 
     int page_table[];
-    Frame pages[];
     int id;
     String filename;
 
@@ -46,8 +45,9 @@ public class UserRunnable implements Runnable{
     public UserRunnable(int id){
         this.id = id;
         filename = "address_" + id +".txt";
-
-        pages = null;
+        for (int i = 0; i < page_table.length; ++i){
+            page_table[i] = -1;
+        }
 
 
     }
@@ -65,10 +65,6 @@ public class UserRunnable implements Runnable{
                 int unprocessed_address = Integer.parseInt(s_address);
                 Address address = new Address(unprocessed_address);
                 lookup(address);
-
-
-
-
                 //get next address
                 s_address = in.readLine();
             }
@@ -87,6 +83,12 @@ public class UserRunnable implements Runnable{
     }
 
     private void lookup(Address address){
+
+        if (page_table[address.page_number] != -1){
+
+            return;
+        }
+
 
     }
 }

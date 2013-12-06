@@ -2,12 +2,14 @@ package com.cs352;
 
 public class SingletonContainer {
 
-    int frame_size;
-    int frame_size_exp;
-    int pages_per_process;
-    int pages_per_process_exp;
-    int main_mem_frames;
-    int main_mem_frames_exp;
+    private int frame_size;
+    private int frame_size_exp;
+    private int pages_per_process;
+    private int pages_per_process_exp;
+    private int main_mem_frames;
+    private int main_mem_frames_exp;
+
+    public Frame main_mem[];
 
     private static SingletonContainer instance = null;
 
@@ -52,6 +54,11 @@ public class SingletonContainer {
     public void setMain_mem_frames(int main_mem_frames) {
         this.main_mem_frames = main_mem_frames;
         this.main_mem_frames_exp = findExponent(main_mem_frames);
+
+        this.main_mem = new Frame[main_mem_frames];
+        for (int i = 0; i < main_mem_frames; ++i){
+            main_mem[i] = new Frame(this.frame_size);
+        }
     }
 
     private int findExponent(int i){
