@@ -17,7 +17,7 @@ public class UserRunnable implements Runnable{
 
         private Address(int i){
             //get the exponents for the frame size
-            int exp = Singleton.getInstance().getFrame_size_exp();
+            int exp = SingletonContainer.getInstance().getFrame_size_exp();
             //offset is 2^pagesize bits
             this.offset = i & ((int) Math.pow(2, exp) -1);
             //page # is the rest, so we'll just

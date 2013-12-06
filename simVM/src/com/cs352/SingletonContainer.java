@@ -1,6 +1,6 @@
 package com.cs352;
 
-public class Singleton {
+public class SingletonContainer {
 
     int frame_size;
     int frame_size_exp;
@@ -9,9 +9,9 @@ public class Singleton {
     int main_mem_frames;
     int main_mem_frames_exp;
 
-    private static Singleton instance = null;
+    private static SingletonContainer instance = null;
 
-    private Singleton(){
+    private SingletonContainer(){
 
     }
 
@@ -58,9 +58,9 @@ public class Singleton {
         return (int) Math.ceil(Math.log(i) / Math.log(2));
     }
 
-    public static Singleton getInstance(){
+    public static SingletonContainer getInstance(){
         if (instance == null){
-            instance = new Singleton();
+            instance = new SingletonContainer();
         }
         return instance;
     }

@@ -27,9 +27,9 @@ public class simVM {
 
             //set the input args to a container class
             //so that threads can access it
-            Singleton.getInstance().setFrame_size(frame_size);
-            Singleton.getInstance().setMain_mem_frames(main_mem_frames);
-            Singleton.getInstance().setPages_per_process(pages_per_process);
+            SingletonContainer.getInstance().setFrame_size(frame_size);
+            SingletonContainer.getInstance().setMain_mem_frames(main_mem_frames);
+            SingletonContainer.getInstance().setPages_per_process(pages_per_process);
         }
         //catch exceptions
         catch(NumberFormatException e){
