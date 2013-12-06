@@ -10,8 +10,7 @@ public class simVM {
      num user processes
      */
     public static void main(String[] args) {
-
-
+        //the number of user processes
         int user_processes;
 
 	    //check for appropriate args
@@ -32,12 +31,13 @@ public class simVM {
             Singleton.getInstance().setMain_mem_frames(main_mem_frames);
             Singleton.getInstance().setPages_per_process(pages_per_process);
         }
+        //catch exceptions
         catch(NumberFormatException e){
             System.out.println("one or more arguments are non-integer");
             return;
         }
 
-
+        //make new threads and start them
         for (int i = 1; i <= user_processes; ++i){
             new Thread(new UserRunnable(i)).start();
         }

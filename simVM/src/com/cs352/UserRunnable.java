@@ -16,11 +16,14 @@ public class UserRunnable implements Runnable{
         private int page_number;
 
         private Address(int i){
-
-            this.page_number = 0;
-            this.offset = 0;
+            //get the exponents for the frame size
+            int exp = Singleton.getInstance().getFrame_size_exp();
+            //offset is 2^pagesize bits
+            this.offset = i & ((int) Math.pow(2, exp) -1);
+            //page # is the rest, so we'll just
+            // shift off the offset and call it good
+            this.page_number = i >> (16-exp);
         }
-
 
         public int getPage_number() {
             return page_number;
