@@ -77,7 +77,7 @@ public class SingletonContainer {
             if (cur.getOwnerID() == -1){
                 cur.access(id);
                 //log swap in console
-                System.out.printf("Process %d finds a free frame in main memory (frame number = %d)", id, i);
+                System.out.printf("Process %d finds a free frame in main memory (frame number = %d)\n", id, i);
 
                 //return the frame number of the new frame
                 //to update page table
@@ -94,7 +94,7 @@ public class SingletonContainer {
         main_mem[oldest_index].access(id);
 
         //log swap in console
-        System.out.printf("Process %d replaces a frame from main memory (frame number = %d)", id, oldest_index);
+        System.out.printf("Process %d replaces a frame from main memory (frame number = %d)\n", id, oldest_index);
 
         //return the frame number of the new frame
         //to update page table

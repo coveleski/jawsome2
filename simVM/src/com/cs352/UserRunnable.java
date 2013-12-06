@@ -100,7 +100,10 @@ public class UserRunnable implements Runnable {
             return;
         } else {
             //page fault
+            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) not in main memory\n", id, address, address.page_number, address.offset);
             System.out.printf("Process %d issues an I/O operation to swap in demanded page(page number = %d)\n", id, address.page_number);
+
+            frame_num = SingletonContainer.getInstance().swapFrame(id);
 
             //sleep to simulate I/O time
             try {
@@ -113,7 +116,7 @@ public class UserRunnable implements Runnable {
             //wake from sleep, update page table
             //TODO: Update Page Table
             //TODO: Update 0 in print below
-            System.out.printf("Process %d demanded page(page number = %d) has been swapped in from main memory (frame number = %d", id, address.page_number, 0);
+            System.out.printf("Process %d demanded page(page number = %d) has been swapped in from main memory (frame number = %d\n", id, address.page_number, frame_num);
 
             System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
 
