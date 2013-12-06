@@ -13,7 +13,7 @@ public class simVM {
         //the number of user processes
         int user_processes;
 
-	    //check for appropriate args
+	    //check for appropriate number of args
         if (args.length < 4){
             System.out.println("too few arguments");
             return;
@@ -41,6 +41,5 @@ public class simVM {
         for (int i = 1; i <= user_processes; ++i){
             new Thread(new UserRunnable(i)).start();
         }
-
     }
 }
