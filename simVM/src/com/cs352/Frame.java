@@ -8,7 +8,7 @@ public class Frame {
 
     private long time;
 
-    int owner_id;
+    int owner_id = -1;
 
     public long getTime() {
         return time;

@@ -65,6 +65,42 @@ public class SingletonContainer {
         return (int) Math.ceil(Math.log(i) / Math.log(2));
     }
 
+    int swapFrame(int id){
+
+        long oldest = -1;
+        int oldest_index = -1;
+
+        for (int i = 0; i < main_mem.length; ++i){
+            Frame cur = main_mem[i];
+            //try to find an empty frame
+            //swap frames if empty
+            if (cur.getOwnerID() == -1){
+                cur.access(id);
+                //log swap in console
+                System.out.printf("Process %d finds a free frame in main memory (frame number = %d)", id, i);
+
+                //return the frame number of the new frame
+                //to update page table
+                return i;
+            } else {
+                //if the frame is not empty, compare and record oldest frame
+                if (cur.getTime() < oldest){
+                    oldest = cur.getTime();
+                    oldest_index = i;
+                }
+            }
+        }
+        //if no empty frames found, swap with oldest frame
+        main_mem[oldest_index].access(id);
+
+        //log swap in console
+        System.out.printf("Process %d replaces a frame from main memory (frame number = %d)", id, oldest_index);
+
+        //return the frame number of the new frame
+        //to update page table
+        return oldest_index;
+    }
+
     public static SingletonContainer getInstance(){
         if (instance == null){
             instance = new SingletonContainer();
