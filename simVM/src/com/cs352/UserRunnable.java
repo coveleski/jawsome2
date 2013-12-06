@@ -1,20 +1,52 @@
 package com.cs352;
 
 import java.io.*;
-import java.util.Map;
 
-/**
- * Created by David on 12/4/13.
- */
 public class UserRunnable implements Runnable{
 
     int page_table[];
+    Frame pages[];
     int id;
     String filename;
+
+
+    private class Address{
+
+        private int offset;
+        private int page_number;
+
+        private Address(int i){
+
+            this.page_number = 0;
+            this.offset = 0;
+        }
+
+
+        public int getPage_number() {
+            return page_number;
+        }
+
+        public void setPage_number(int page_number) {
+            this.page_number = page_number;
+        }
+
+        public int getOffset() {
+            return offset;
+        }
+
+        public void setOffset(int offset) {
+            this.offset = offset;
+        }
+
+    }
 
     public UserRunnable(int id){
         this.id = id;
         filename = "address_" + id +".txt";
+
+        pages = null;
+
+
     }
     public void run(){
         //open the appropriate file
@@ -27,7 +59,9 @@ public class UserRunnable implements Runnable{
             //while the file end is not reached
             while (s_address != null){
                 //convert address to int
-                int address = Integer.parseInt(s_address);
+                int unprocessed_address = Integer.parseInt(s_address);
+                Address address = new Address(unprocessed_address);
+                lookup(address);
 
 
 
@@ -36,8 +70,8 @@ public class UserRunnable implements Runnable{
                 s_address = in.readLine();
             }
 
-
-
+            System.out.println("Process " + id + " ends.");
+            //close streams
             in.close();
             fr.close();
 
@@ -46,6 +80,10 @@ public class UserRunnable implements Runnable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    private void lookup(Address address){
 
     }
 }
