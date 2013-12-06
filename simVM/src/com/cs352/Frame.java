@@ -5,8 +5,18 @@ import java.util.Stack;
 public class Frame {
 
     byte[] frame_memory;
+
     private long time;
+
     int owner_id;
+
+    public long getTime() {
+        return time;
+    }
+
+    public int getOwnerID() {
+        return owner_id;
+    }
 
     public Frame(int i){
 

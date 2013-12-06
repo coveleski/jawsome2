@@ -13,8 +13,10 @@ public class UserRunnable implements Runnable{
 
         private int offset;
         private int page_number;
+        private int full;
 
         private Address(int i){
+            full = i;
             //get the exponents for the frame size
             int exp = SingletonContainer.getInstance().getFrame_size_exp();
             //offset is 2^pagesize bits
@@ -38,6 +40,12 @@ public class UserRunnable implements Runnable{
 
         public void setOffset(int offset) {
             this.offset = offset;
+        }
+
+        public String toString(){
+
+            return Integer.toString(full);
+
         }
 
     }
@@ -84,11 +92,12 @@ public class UserRunnable implements Runnable{
 
     private void lookup(Address address){
 
-        if (page_table[address.page_number] != -1){
-
+        int frame_num = page_table[address.page_number];
+        if (frame_num!= -1 && SingletonContainer.getInstance().main_mem[frame_num].getOwnerID() == this.id){
+            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)", id, address, address.page_number, address.offset, frame_num);
             return;
+        } else {
+            //page fault
         }
-
-
     }
 }
