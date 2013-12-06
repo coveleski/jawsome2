@@ -23,7 +23,11 @@ public class UserRunnable implements Runnable {
             this.offset = i & ((int) Math.pow(2, exp) - 1);
             //page # is the rest, so we'll just
             // shift off the offset and call it good
-            this.page_number = i >> (16 - exp);
+            this.page_number = i >> (exp);
+
+//            System.out.println("page num size = " + page_number);
+//            System.out.println("offset= " + offset);
+//            System.out.println("exp= " + exp);
         }
 
         public int getPage_number() {
@@ -53,6 +57,7 @@ public class UserRunnable implements Runnable {
     public UserRunnable(int id) {
         this.id = id;
         filename = "address_" + id + ".txt";
+        page_table = new int[SingletonContainer.getInstance().getPages_per_process()];
         for (int i = 0; i < page_table.length; ++i) {
             page_table[i] = -1;
         }
@@ -93,14 +98,15 @@ public class UserRunnable implements Runnable {
 
     private void lookup(Address address) {
 
+
         int frame_num = page_table[address.page_number];
         if (frame_num != -1 && SingletonContainer.getInstance().main_mem[frame_num].getOwnerID() == this.id) {
             SingletonContainer.getInstance().main_mem[frame_num].access(id);
-            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
+            System.out.printf("Process %d accesses address %s(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
             return;
         } else {
             //page fault
-            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) not in main memory\n", id, address, address.page_number, address.offset);
+            System.out.printf("Process %d accesses address %s(page number = %d, page offset = %d) not in main memory\n", id, address, address.page_number, address.offset);
             System.out.printf("Process %d issues an I/O operation to swap in demanded page(page number = %d)\n", id, address.page_number);
 
             frame_num = SingletonContainer.getInstance().swapFrame(id);
@@ -115,10 +121,10 @@ public class UserRunnable implements Runnable {
 
             //wake from sleep, update page table
             //TODO: Update Page Table
-            //TODO: Update 0 in print below
-            System.out.printf("Process %d demanded page(page number = %d) has been swapped in from main memory (frame number = %d\n", id, address.page_number, frame_num);
+            page_table[address.page_number] = frame_num;
+            System.out.printf("Process %d demanded page(page number = %d) has been swapped in from main memory (frame number = %d)\n", id, address.page_number, frame_num);
 
-            System.out.printf("Process %d accesses address %d(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
+            System.out.printf("Process %d accesses address %s(page number = %d, page offset = %d) in main memory(frame number =%d)\n", id, address, address.page_number, address.offset, frame_num);
 
 
         }

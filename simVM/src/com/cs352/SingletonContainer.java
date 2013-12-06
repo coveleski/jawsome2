@@ -36,6 +36,9 @@ public class SingletonContainer {
     public void setFrame_size(int frame_size) {
         this.frame_size = frame_size;
         this.frame_size_exp = findExponent(frame_size);
+
+//        System.out.println("frame size = " + frame_size);
+//        System.out.println("frame sizexp = " + frame_size_exp);
     }
 
     public int getPages_per_process() {
@@ -45,6 +48,8 @@ public class SingletonContainer {
     public void setPages_per_process(int pages_per_process) {
         this.pages_per_process = pages_per_process;
         this.pages_per_process_exp = findExponent(pages_per_process);
+//        System.out.println("pages per proc = " + pages_per_process);
+//        System.out.println("pages per procexp = " + pages_per_process_exp);
     }
 
     public int getMain_mem_frames() {
@@ -54,6 +59,9 @@ public class SingletonContainer {
     public void setMain_mem_frames(int main_mem_frames) {
         this.main_mem_frames = main_mem_frames;
         this.main_mem_frames_exp = findExponent(main_mem_frames);
+
+//        System.out.println("main mem frames= " + main_mem_frames);
+//        System.out.println("main mem framesxp = " + main_mem_frames_exp);
 
         this.main_mem = new Frame[main_mem_frames];
         for (int i = 0; i < main_mem_frames; ++i){
